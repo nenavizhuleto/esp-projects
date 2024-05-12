@@ -8,6 +8,7 @@
 #include "driver/gpio.h"
 
 #define BLINK_LED 2
+#define BLINK_RATE_MS 1000
 
 void app_main(void)
 {
@@ -28,14 +29,12 @@ void app_main(void)
         gpio_set_level(BLINK_LED, 1);
         ESP_LOGI("%s", "LED: ON\n");
 
-        // wait for 1 second
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(BLINK_RATE_MS / portTICK_PERIOD_MS);
 
         // turn off blink pin
         gpio_set_level(BLINK_LED, 0);
         ESP_LOGI("%s", "LED: OFF\n");
 
-        // wait for 1 second
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(BLINK_RATE_MS / portTICK_PERIOD_MS);
     }
 }
