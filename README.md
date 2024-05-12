@@ -18,3 +18,11 @@ idf.py build
 ```sh
 idf.py -p /dev/ttyUSB0 flash
 ```
+
+## 1. Blink LED
+
+TODO
+
+## 2. Blink Multiple LEDs
+
+![](.assets/blink-multiple-led.gif)
