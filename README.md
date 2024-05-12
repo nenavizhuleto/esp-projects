@@ -21,7 +21,7 @@ idf.py -p /dev/ttyUSB0 flash
 
 ## 1. Blink LED
 
-TODO
+![](.assets/blink-led.gif)
 
 ## 2. Blink Multiple LEDs
 
